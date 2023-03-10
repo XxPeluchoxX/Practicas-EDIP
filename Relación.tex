@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+%Definiciones para ahorrar trabajo
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\todoi{\forall i \in \{1, \ldots, n\}}
+\def\todon{\ \forall n \in \N}
+
+\title{Relación de Problemas I: Variables estadísticas unidimensionales}
+\author{José Juan Urrutia Milán, Ana, Luis, Carlos}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\newtheorem{ej1}{Ejercicio}
+\begin{ej1}
+    El número de hijos de las familias de una determinada barriada de una ciudad
+    es una variable estadística de la que se conocen los siguientes datos:\\
+
+    $n_i$ : frecuencias absolutas \par
+    $N_i$ : frecuencias absolutas acumuladas \par
+    $f_i$ : freucencias relativas \\
+
+    \noindent
+    a) Completar la tabla de frecuencias.\newline
+    b) Representar la distribución mediante un diagrama de barras y la curva de
+    distribución.\newline
+    c) Promediar los valores de la variable mediante diferentes medidas. Interpretarlas.
+
+\end{ej1}
+
+\bigskip \noindent
+a) \\ \\
+\begin{tabular}{|c|c|c|c|}
+    $x_i$ & $n_i$ & $N_i$ & $f_i$ \\
+    \hline
+    0     & 80    & 80    & 0.16  \\
+    \hline
+    1     & 110   & 190   & 0.22  \\
+    \hline
+    2     & 130   & 320   & 0.26  \\
+    \hline
+    3     & 90    & 410   & 0.18  \\
+    \hline
+    4     & 40    & 450   & 0.08  \\
+    \hline
+    5     & 30    & 480   & 0.06  \\
+    \hline
+    6     & 20    & 500   & 0.04  \\
+    \hline
+\end{tabular}
+
+\bigskip
+\newtheorem{ej2}{Ejercicio}
+\begin{ej2}
+    La puntuación obtenida por 50 personas que se presentan a una prueba de selección,
+    sumadas las puntuaciones de los distintos tests, fueron:
+
+    \begin{center}
+        174, 185, 166, 176, 145, 166, 191, 175, 158, 156, 156, 187, 162, 172,
+        197, 181, 151, 161, 183, 172, 162, 147, 178, 176, 141, 170, 171, 158,
+        184, 173, 169, 162, 172, 181, 187, 177, 164, 171, 193, 183, 173, 179,
+        188, 179, 167, 178, 180, 168, 148, 173.
+    \end{center}
+
+    \noindent
+    a) Agrupar los datos en intervalos de amplitud 5 desde 140 a 200 y dar la tabla de
+    frecuencias.\newline
+    b) Representar la distribución mediante un histograma, poligonal de frecuencias
+    y curva de distribuión.
+\end{ej2}
+
+\bigskip \noindent
+a) \\ \\
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+    $I_i$      & $n_i$ & $N_i$ & $f_i$ & $F_i$ & $c_i$ & $a_i$ & $h_i$ \\
+    \hline
+    [140, 145] & 2     & 2     & 0.04  & 0.04  & 2.5   & 5     & 0.4   \\
+    \hline
+    (145, 150] & 2     & 4     & 0.04  & 0.08  & 2.5   & 5     & 0.4   \\
+    \hline
+    (150, 155] & 1     & 5     & 0.02  & 0.1   & 2.5   & 5     & 0.2   \\
+    \hline
+    (155, 160] & 4     & 9     & 0.08  & 0.18  & 2.5   & 5     & 0.8   \\
+    \hline
+    (160, 165] & 5     & 14    & 0.1   & 0.28  & 2.5   & 5     & 1     \\
+    \hline
+    (165, 170] & 6     & 20    & 0.12  & 0.4   & 2.5   & 5     & 1.2   \\
+    \hline
+    (170, 175] & 10    & 30    & 0.2   & 0.6   & 2.5   & 5     & 2     \\
+    \hline
+    (175, 180] & 8     & 38    & 0.16  & 0.76  & 2.5   & 5     & 1.6   \\
+    \hline
+    (180, 185] & 6     & 44    & 0.12  & 0.88  & 2.5   & 5     & 1.2   \\
+    \hline
+    (185, 190] & 3     & 47    & 0.06  & 0.94  & 2.5   & 5     & 0.6   \\
+    \hline
+    (190, 195] & 2     & 49    & 0.04  & 0.98  & 2.5   & 5     & 0.4   \\
+    \hline
+    (195, 200] & 1     & 50    & 0.02  & 1     & 2.5   & 5     & 0.2   \\
+    \hline
+\end{tabular}
+
+\bigskip
+\newtheorem{ej3}{Ejercicio}
+\begin{ej3}
+    La distribución de la renta familiar en el año 2003 por comunidades autónomas se
+    recoge en la tabla indicada.\\
+
+    $n_i$ : frecuencias absolutas.\par
+    $N_i$ : frecuencias absolutas acumuladas.\par
+    $f_i$ : frecuencias relativas.\par
+    $F_i$ : frecuencias relativas acumuladas.\par
+    $c_i$ : marcas de clase.\par
+    $a_i$ : amplitudes.\par
+    $h_i$ : densidades de frecuencia.\\
+
+    \noindent
+    a) Completar la tabla.\newline
+    b) Representar la distribución mediante un histograma, poligonal de
+    frecuencias y curva de distribución.
+    c) ¿Cuántas comunidades presentan una renta menor o igual que 12700 euros?
+    ¿Y cuántas superior a 11300 euros?
+\end{ej3}
+
+\bigskip \noindent
+a) \\ \\
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+    $I_i$          & $n_i$ & $N_i$ & $f_i$          & $F_i$           & $c_i$ & $a_i$ & $h_i$              \\
+    \hline
+    (8300, 9300]   & 2     & 2     & $\frac{2}{18}$ & $\frac{2}{18}$  & 8800  & 1000  & 0.002              \\
+    \hline
+    (9300, 10200]  & 3     & 5     & $\frac{3}{18}$ & $\frac{5}{18}$  & 9750  & 900   & 0.003              \\
+    \hline
+    (10200, 11300] & 5     & 10    & $\frac{5}{18}$ & $\frac{10}{18}$ & 10750 & 1100  & $\frac{1}{220}$    \\
+    \hline
+    (11300, 12700] & 2     & 12    & $\frac{2}{18}$ & $\frac{12}{18}$ & 12000 & 1400  & $\frac{2}{1400}$   \\
+    \hline
+    (12700, 27100] & 4     & 16    & $\frac{4}{18}$ & $\frac{16}{18}$ & 19900 & 14400 & $\frac{0.005}{18}$ \\
+    \hline
+    (27100, 45100] & 2     & 18    & $\frac{2}{18}$ & 1               & 36100 & 18000 & $\frac{0.002}{18}$ \\
+    \hline
+\end{tabular}
+
+\end{document}
